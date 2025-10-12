@@ -260,27 +260,28 @@
                     </div>
 
                     <form class="" id="redone-contact" data-parsley-validate="" novalidate="" method="POST"
-                        action="https://www.olivecommunitydevelopmentinitiative.org/action.php">
+                        action="{{route('create_info')}}">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Name * </label>
                                     <input type="text" class="form-control" required="required"
-                                        data-parsley-maxlength="70" id="name" name="c_name"
+                                        data-parsley-maxlength="70" id="name" name="name"
                                         placeholder="Not more than 70 characters">
                                 </div> <!-- .form-group ends -->
 
                                 <div class="form-group">
                                     <label>Email </label>
                                     <input type="email" class="form-control" data-parsley-maxlength="70"
-                                        data-parsley-type="email" id="email" name="c_email"
+                                        data-parsley-type="email" id="email" name="email"
                                         placeholder="Not more than 70 characters">
                                 </div> <!-- .form-group ends -->
 
                                 <div class="form-group">
                                     <label>Phone No * </label>
                                     <input type="text" class="form-control" required="required"
-                                        data-parsley-maxlength="50" id="url" name="c_phone"
+                                        data-parsley-maxlength="50" id="url" name="phone"
                                         placeholder="Not more than 50 characters">
                                 </div> <!-- .form-group ends -->
                             </div> <!-- .col-md-6 ends -->
@@ -289,12 +290,12 @@
                                 <div class="form-group">
                                     <label>Subject * </label>
                                     <input type="text" class="form-control" required="required"
-                                        data-parsley-maxlength="100" id="url" name="c_subject"
+                                        data-parsley-maxlength="100" id="url" name="subject"
                                         placeholder="Not more than 100 characters">
                                 </div>
                                 <div class="form-group">
                                     <label>Message * </label>
-                                    <textarea class="form-control" id="message" required="required" data-parsley-maxlength="200" name="c_message"
+                                    <textarea class="form-control" id="message" required="required" data-parsley-maxlength="200" name="message"
                                         placeholder="Not more than 200 characters..."></textarea>
                                 </div>
                             </div> <!-- .col-md-6 ends -->

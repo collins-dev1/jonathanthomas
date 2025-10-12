@@ -21,7 +21,7 @@
                 <input type="file" name="photo" class="form-control">
             </div>
             <div class="mt-3">
-                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
             </div>
         </form>
     </div>

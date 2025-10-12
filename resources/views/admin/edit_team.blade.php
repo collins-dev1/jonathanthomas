@@ -48,7 +48,7 @@
                     <textarea name="description" class="form-control" id="" cols="30" rows="10">{{ $team->description }}</textarea>
                 </div>
                 <div class="mt-3">
-                    <button class="btn btn-primary">Update</button>
+                    <button class="btn btn-primary" type="submit">Update</button>
                 </div>
             </div>
         </form>

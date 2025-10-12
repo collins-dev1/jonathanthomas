@@ -73,31 +73,39 @@
                 <li>
                     <a href="#" class="has-dropdown">
                         <div class="menu-text">
-                            <i class="fas fa-box"></i>
-                            <span>Products</span>
+                            <i class="fas fa-handshake"></i>
+                            <span>Partners</span>
                         </div>
                         <i class="fas fa-chevron-right dropdown-arrow"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#">All Products</a></li>
-                        <li><a href="#">Add Product</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Inventory</a></li>
+                        <li><a href="{{route('add_partner')}}">Add Partners</a></li>
+                        <li><a href="{{route('manage_partner')}}">Manage Partners</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#" class="has-dropdown">
                         <div class="menu-text">
-                            <i class="fas fa-cog"></i>
-                            <span>Settings</span>
+                            <i class="fas fa-images"></i>
+                            <span>Gallery</span>
                         </div>
                         <i class="fas fa-chevron-right dropdown-arrow"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#">General</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">Notifications</a></li>
-                        <li><a href="#">Appearance</a></li>
+                        <li><a href="{{route('add_gallery')}}">Add Gallery</a></li>
+                        <li><a href="{{route('manage_gallery')}}">Manage Gallery</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown">
+                        <div class="menu-text">
+                            <i class="fas fa-address-book"></i>
+                            <span>Contact Information</span>
+                        </div>
+                        <i class="fas fa-chevron-right dropdown-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="{{route('contact_information')}}">Manage Contact Information</a></li>
                     </ul>
                 </li>
             </ul>
@@ -121,7 +129,9 @@
                 </div>
                 <div class="user-profile">
                     <img src="https://i.pravatar.cc/150?img=32" alt="User">
-                    <span>John Doe</span>
+                    @auth
+                        <span>{{auth()->user()->name}}</span>
+                    @endauth
                     <div class="user-dropdown">
                         <a href="#">
                             <i class="fas fa-user"></i>
