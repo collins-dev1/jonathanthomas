@@ -158,59 +158,22 @@
                                 </li>
                                 <li id="contacts"><a href="{{ route('contact_us') }}">Contact</a>
                                 </li>
-                                <li id="Resources"><a href="{{ route('resources') }}">Resources</a>
+                                <li id="Resources"><a href="{{ route('blog') }}">Blog</a>
                                 </li>
                             </ul>
                         </nav>
                         <!-- Signup -->
                         <p class="top-Signup"><a href="{{ route('donation') }}" class="dona"
                                 role="button">Donate</a></p>
-                        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true"
-                            style="display: none;">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header"> <img id="img_logo" src="images/logo.png"
-                                            alt="logo">
-                                        <button type="button" class="close" data-dismiss="modal"
-                                            aria-label="Close"> <span class="glyphicon glyphicon-remove"
-                                                aria-hidden="true"></span> </button>
-                                    </div>
-                                    <div id="div-forms">
-                                        <form id="login-form">
-                                            <div class="modal-body">
-                                                <div id="div-login-msg"> <span id="text-login-msg">Username or email
-                                                        address </span> </div>
-                                                <input id="login_username" class="form-control" type="text"
-                                                    placeholder="Username" required>
-                                                <input id="login_password" class="form-control" type="password"
-                                                    placeholder="Password" required>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        Remember me </label>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <div>
-                                                    <button type="submit" class="btn-login">Login</button>
-                                                </div>
-                                                <div>
-                                                    <button onclick="location.href='account_page.html'"
-                                                        id="login_register_btn" type="button"
-                                                        class="btn btn-link">Register</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <!-- END # MODAL LOGIN -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @include('sweetalert::alert')
+
     <!-- End Menu Area -->
 
     <!-- Start Mobile Menu -->
@@ -225,6 +188,9 @@
 
                 </li>
                 <li><a href="{{ route('gallery') }}">Gallery</a>
+                </li>
+                <li>
+                    <a href="{{route('blog')}}">Blog</a>
                 </li>
                 <li class=""><a href="{{ route('contact_us') }}">Contact</a>
                 </li>
@@ -440,7 +406,7 @@
                                 </li>
                                 <li><a href="{{ route('gallery') }}">Gallery
                                     </a></li>
-                                <li><a href="{{ route('resources') }}">Resources
+                                <li><a href="{{ route('blog') }}">Blog
                                     </a></li>
                             </ul>
                         </div>

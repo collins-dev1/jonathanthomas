@@ -22,8 +22,8 @@ class LandingPageController extends Controller
     }
 
     // Resources
-    public function resources(){
-        return view('resources');
+    public function blog(){
+        return view('blog');
     }
 
     // Donation

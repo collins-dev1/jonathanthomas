@@ -127,6 +127,7 @@
 	text-transform: uppercase;
 	margin-bottom: 25px;
 	color: #fff;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.9);
 }
 .main-slider .slide-text h1 {
 	border: 2px solid #00a557;
@@ -147,6 +148,7 @@
 	font-weight: 800;
 	color: #000;
 	margin-top: 20px;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.7);
 }
 .main-slider .slide-text a {
 	background: #fff;

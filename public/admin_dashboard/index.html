@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Overlay for mobile sidebar -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-chart-line fa-2x"></i>
+            <h2>AdminPanel</h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        <div class="menu-text">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown">
+                        <div class="menu-text">
+                            <i class="fas fa-users"></i>
+                            <span>Users</span>
+                        </div>
+                        <i class="fas fa-chevron-right dropdown-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">All Users</a></li>
+                        <li><a href="#">Add User</a></li>
+                        <li><a href="#">User Roles</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown">
+                        <div class="menu-text">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                        </div>
+                        <i class="fas fa-chevron-right dropdown-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">Traffic</a></li>
+                        <li><a href="#">Sales</a></li>
+                        <li><a href="#">Performance</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown">
+                        <div class="menu-text">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </div>
+                        <i class="fas fa-chevron-right dropdown-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">All Orders</a></li>
+                        <li><a href="#">Pending</a></li>
+                        <li><a href="#">Completed</a></li>
+                        <li><a href="#">Cancelled</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown">
+                        <div class="menu-text">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </div>
+                        <i class="fas fa-chevron-right dropdown-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Add Product</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Inventory</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="has-dropdown">
+                        <div class="menu-text">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </div>
+                        <i class="fas fa-chevron-right dropdown-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">General</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Notifications</a></li>
+                        <li><a href="#">Appearance</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="User">
+                    <span>John Doe</span>
+                    <div class="user-dropdown">
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                        <div class="divider"></div>
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-cards">
+            <div class="card stats-card">
+                <div class="stats-icon blue">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="stats-info">
+                    <h3>1,254</h3>
+                    <p>Total Orders</p>
+                </div>
+            </div>
+            <div class="card stats-card">
+                <div class="stats-icon green">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stats-info">
+                    <h3>3,217</h3>
+                    <p>Total Customers</p>
+                </div>
+            </div>
+            <div class="card stats-card">
+                <div class="stats-icon purple">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stats-info">
+                    <h3>$9,254</h3>
+                    <p>Total Revenue</p>
+                </div>
+            </div>
+            <div class="card stats-card">
+                <div class="stats-icon pink">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="stats-info">
+                    <h3>12.5%</h3>
+                    <p>Growth Rate</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts">
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3>Revenue Overview</h3>
+                    <div class="chart-actions">
+                        <select>
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 90 Days</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-placeholder">
+                    <i class="fas fa-chart-bar fa-3x"></i>
+                    <span style="margin-left: 10px;">Revenue Chart</span>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3>Traffic Sources</h3>
+                    <div class="chart-actions">
+                        <select>
+                            <option>This Week</option>
+                            <option>Last Week</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-placeholder">
+                    <i class="fas fa-chart-pie fa-3x"></i>
+                    <span style="margin-left: 10px;">Traffic Chart</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="recent-activity">
+            <div class="activity-header">
+                <h3>Recent Activity</h3>
+                <a href="#">View All</a>
+            </div>
+            <ul class="activity-list">
+                <li class="activity-item">
+                    <div class="activity-icon blue">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="activity-details">
+                        <h4>New Order Received</h4>
+                        <p>Order #3254 from John Smith</p>
+                    </div>
+                    <div class="activity-time">2 min ago</div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon green">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="activity-details">
+                        <h4>New User Registered</h4>
+                        <p>Jane Doe created an account</p>
+                    </div>
+                    <div class="activity-time">1 hour ago</div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon purple">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="activity-details">
+                        <h4>Campaign Sent</h4>
+                        <p>Marketing email sent to 2,500 users</p>
+                    </div>
+                    <div class="activity-time">3 hours ago</div>
+                </li>
+                <li class="activity-item">
+                    <div class="activity-icon blue">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="activity-details">
+                        <h4>Payment Received</h4>
+                        <p>$2,500 payment from Tech Solutions Inc.</p>
+                    </div>
+                    <div class="activity-time">1 day ago</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+   <script src="js/script.js"></script>
+</body>
+</html>

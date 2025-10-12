@@ -158,53 +158,13 @@
                                 </li>
                                 <li id="contacts"><a href="{{ route('contact_us') }}">Contact</a>
                                 </li>
-                                <li id="Resources"><a href="{{ route('resources') }}">Resources</a>
+                                <li id="Resources"><a href="{{ route('blog') }}">Blog</a>
                                 </li>
                             </ul>
                         </nav>
                         <!-- Signup -->
                         <p class="top-Signup"><a href="{{ route('donation') }}" class="dona"
                                 role="button">Donate</a></p>
-                        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true"
-                            style="display: none;">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header"> <img id="img_logo" src="images/logo.png"
-                                            alt="logo">
-                                        <button type="button" class="close" data-dismiss="modal"
-                                            aria-label="Close"> <span class="glyphicon glyphicon-remove"
-                                                aria-hidden="true"></span> </button>
-                                    </div>
-                                    <div id="div-forms">
-                                        <form id="login-form">
-                                            <div class="modal-body">
-                                                <div id="div-login-msg"> <span id="text-login-msg">Username or email
-                                                        address </span> </div>
-                                                <input id="login_username" class="form-control" type="text"
-                                                    placeholder="Username" required>
-                                                <input id="login_password" class="form-control" type="password"
-                                                    placeholder="Password" required>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        Remember me </label>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <div>
-                                                    <button type="submit" class="btn-login">Login</button>
-                                                </div>
-                                                <div>
-                                                    <button onclick="location.href='account_page.html'"
-                                                        id="login_register_btn" type="button"
-                                                        class="btn btn-link">Register</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- END # MODAL LOGIN -->
                     </div>
                 </div>
@@ -226,6 +186,9 @@
                 </li>
                 <li><a href="{{ route('gallery') }}">Gallery</a>
                 </li>
+                <li>
+                    <a href="{{route('blog')}}">Blog</a>
+                </li>
                 <li class=""><a href="{{ route('contact_us') }}">Contact</a>
                 </li>
                 <li><a href="{{ route('donation') }}" class="dona">Donate</a>
@@ -243,39 +206,19 @@
                     <div class="main-slider">
                         <div class="slider">
                             <div id="mainSlider" class="nivoSlider slider-image">
-                                <img src="{{ asset('landing_page/images/133185609160dc4b6f46b1e.jpg') }}"
+                                <img src="{{ asset('landing_page/images/logo/caroimg1.avif') }}"
                                     alt="main slider" title="#htmlcaption1" />
-                                <img src="{{ asset('landing_page/images/slider/145805b08194a693e3.jpg') }}"
+                                <img src="{{ asset('landing_page/images/logo/caroimg2.avif') }}"
                                     alt="main slider" title="#htmlcaption2" />
-                                <img src="{{ asset('landing_page/images/slider/177675b081aec4b94c.jpg') }}"
+                                <img src="{{ asset('landing_page/images/logo/caroimg3.avif') }}"
                                     alt="main slider" title="#htmlcaption3" />
-                                <img src="{{ asset('landing_page/images/slider/252525b081ba06dee4.jpg') }}"
+                                <img src="{{ asset('landing_page/images/logo/caroimg4.avif') }}"
                                     alt="main slider" title="#htmlcaption4" />
-                                <img src="{{ asset('landing_page/images/slider/102535b081c15d31a2.jpg') }}"
+                                <img src="{{ asset('landing_page/images/logo/caroimg5.avif') }}"
                                     alt="main slider" title="#htmlcaption5" />
-                                <img src="{{ asset('landing_page/images/slider/167045b081d4e0c191.jpg') }}"
-                                    alt="main slider" title="#htmlcaption6" />
-                                <img src="{{ asset('landing_page/images/160224699560c32870b6b9a.jpg') }}"
-                                    alt="main slider" title="#htmlcaption7" />
-                                <img src="{{ asset('landing_page/images/199335046460c3288b3b541.jpg') }}"
-                                    alt="main slider" title="#htmlcaption8" />
-                                <img src="{{ asset('landing_page/images/slider/6452313460c329e842afa.jpg') }}"
-                                    alt="main slider" title="#htmlcaption9" />
-                                <img src="{{ asset('landing_page/images/slider/212272842060c32abfb6078.jpg') }}"
-                                    alt="main slider" title="#htmlcaption10" />
-                                <img src="{{ asset('landing_page/images/slider/55929121160dda1856a139.jpg') }}"
-                                    alt="main slider" title="#htmlcaption11" />
-                                <img src="{{ asset('landing_page/images/slider/108234396668c95fa3574a5.jpg') }}"
-                                    alt="main slider" title="#htmlcaption12" />
-                                <img src="{{ asset('landing_page/images/slider/62679469268c960347e3bb.jpg') }}"
-                                    alt="main slider" title="#htmlcaption13" />
-                                <img src="{{ asset('landing_page/images/slider/79489682868c961504f101.jpg') }}"
-                                    alt="main slider" title="#htmlcaption14" />
-                                <img src="{{ asset('landing_page/images/slider/40688294568c9623895611.jpg') }}"
-                                    alt="main slider" title="#htmlcaption15" />
-                                <img src="{{ asset('landing_page/images/slider/57935143068c9640ed8fdf.jpg') }}"
-                                    alt="main slider" title="#htmlcaption16" />
                             </div>
+                            @include('sweetalert::alert')
+
                             <!-- Slider Caption One -->
                             <div id="htmlcaption1" class="nivo-html-caption slider-caption-1">
                                 <div class="slider-progress"></div>
@@ -362,215 +305,6 @@
                                                 data-wow-delay="0s">OHOFN</h1>
                                             <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
                                                 data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY</h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption6" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN</h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY</h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption7" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN</h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY</h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption8" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN</h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY</h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption9" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">Menstrual Hygiene sensitisation</h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">Health Project</h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> At Community Secondary School, Apata Ajele,
-                                                Eyenkorin.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption10" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN</h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY</h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption11" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN</h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY</h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption12" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN</h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY </h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption13" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN</h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY</h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption14" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN
-                                            </h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY </h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption15" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN </h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY </h2>
-                                            <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
-                                                data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
-                                                facing a plethora of problems. Help us provide them with Health,
-                                                Education and Financial Assistance.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slider Caption One -->
-                            <div id="htmlcaption16" class="nivo-html-caption slider-caption-1">
-                                <div class="slider-progress"></div>
-                                <div class="slide-text">
-                                    <div class="middle-text">
-                                        <div class="cap-dec">
-                                            <h1 class="cap-dec wow zoomInRight" data-wow-duration="1.1s"
-                                                data-wow-delay="0s">OHOFN
-                                            </h1>
-                                            <h2 class="cap-dec wow zoomInRight" data-wow-duration="1.3s"
-                                                data-wow-delay="0s">OKOLO HENRY OBINNA FOUNDATION FOR THE NEEDY </h2>
                                             <p class="cap-dec wow zoomInRight" data-wow-duration="1.5s"
                                                 data-wow-delay="0s"> Millions of vulnerable families in Nigeria are
                                                 facing a plethora of problems. Help us provide them with Health,
@@ -908,7 +642,7 @@
                                                         href="{{route('gallery')}}">Gallery
                                                     </a></li>
                                                     <li><a
-                                                        href="{{route('resources')}}">Resources
+                                                        href="{{route('blog')}}">Blog
                                                     </a></li>
                                             </ul>
                                         </div>
