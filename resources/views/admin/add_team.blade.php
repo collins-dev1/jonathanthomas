@@ -3,7 +3,7 @@
 @section('content')
 <div>
     <div>
-        <h3><i class="fas fa-users"></i> Add Team</h3>
+        <h3><i class="fas fa-users"></i> Create Team</h3>
     </div>
     <div class="mt-4">
         <form action="{{route('create_team')}}" method="POST" enctype="multipart/form-data">

@@ -5,7 +5,7 @@
         <div>
             <h3>
                 <a href="{{ route('manage_team') }}"><i class="fas fa-chevron-left dropdown-arrow"></i></a>
-                <i class="fas fa-user"></i> Team Information
+                <i class="fas fa-user"></i> Edit and Update Team
             </h3>
         </div>
         <form action="{{route('update_team', $team->id)}}" method="POST" enctype="multipart/form-data">

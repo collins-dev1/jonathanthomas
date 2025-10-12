@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\TeamController;
@@ -35,4 +36,11 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('edit_team/{id}', [TeamController::class, 'edit_team'])->name('edit_team');
     Route::post('update_team/{id}', [TeamController::class, 'update_team'])->name('update_team');
     Route::get('delete_team/{id}', [TeamController::class, 'delete_team'])->name('delete_team');
+    Route::get('/add_blog', [BlogController::class, 'add_blog'])->name('add_blog');
+    Route::post('create_blog', [BlogController::class, 'create_blog'])->name('create_blog');
+    Route::get('/manage_blog', [BlogController::class, 'manage_blog'])->name('manage_blog');
+    Route::get('view_blog/{id}', [BlogController::class, 'view_blog'])->name('view_blog');
+    Route::get('edit_blog/{id}', [BlogController::class, 'edit_blog'])->name('edit_blog');
+    Route::post('update_blog/{id}', [BlogController::class, 'update_blog'])->name('update_blog');
+    Route::get('delete_blog/{id}', [BlogController::class, 'delete_blog'])->name('delete_blog');
 });
