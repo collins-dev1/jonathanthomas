@@ -108,6 +108,19 @@
                         <li><a href="{{route('contact_information')}}">Manage Contact Information</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#" class="has-dropdown">
+                        <div class="menu-text">
+                            <i class="fas fa-quote-left"></i>
+                            <span>Testimony</span>
+                        </div>
+                        <i class="fas fa-chevron-right dropdown-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="{{route('add_testimony')}}">Add Testimony</a></li>
+                        <li><a href="{{route('manage_testimony')}}">Manage Testimony</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
