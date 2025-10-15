@@ -5,11 +5,11 @@
         <div class="stats-cards">
             <div class="card stats-card">
                 <div class="stats-icon blue">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-hand-holding-heart"></i>
                 </div>
                 <div class="stats-info">
-                    <h3>1,254</h3>
-                    <p>Total Orders</p>
+                    <h3 class="text-center">{{$donation}}</h3>
+                    <p>Total Donation</p>
                 </div>
             </div>
             <div class="card stats-card">
@@ -17,26 +17,54 @@
                     <i class="fas fa-users"></i>
                 </div>
                 <div class="stats-info">
-                    <h3>3,217</h3>
-                    <p>Total Customers</p>
+                    <h3 class="text-center">{{$team}}</h3>
+                    <p>Total Team</p>
                 </div>
             </div>
             <div class="card stats-card">
                 <div class="stats-icon purple">
-                    <i class="fas fa-dollar-sign"></i>
+                    <span class="text-success fw-bold">₦</span>
+
                 </div>
                 <div class="stats-info">
-                    <h3>$9,254</h3>
-                    <p>Total Revenue</p>
+                    <h3 class="text-center">₦{{ number_format($totalApprovedDonations, 2) }}</h3>
+                    <p>Total Approved Donations</p>
                 </div>
             </div>
             <div class="card stats-card">
                 <div class="stats-icon pink">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-blog"></i>
                 </div>
                 <div class="stats-info">
-                    <h3>12.5%</h3>
-                    <p>Growth Rate</p>
+                    <h3 class="text-center">{{$blog}}</h3>
+                    <p>Total Blog</p>
+                </div>
+            </div>
+            <div class="card stats-card">
+                <div class="stats-icon pink">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="stats-info">
+                    <h3 class="text-center">{{$partner}}</h3>
+                    <p>Total Partner</p>
+                </div>
+            </div>
+            <div class="card stats-card">
+                <div class="stats-icon pink">
+                    <i class="fas fa-images"></i>
+                </div>
+                <div class="stats-info">
+                    <h3 class="text-center">{{$gallery}}</h3>
+                    <p>Total Partner</p>
+                </div>
+            </div>
+            <div class="card stats-card">
+                <div class="stats-icon pink">
+                    <i class="fas fa-address-book"></i>
+                </div>
+                <div class="stats-info">
+                    <h3 class="text-center">{{$info}}</h3>
+                    <p>Total Contact Information</p>
                 </div>
             </div>
         </div>

@@ -467,7 +467,7 @@
 
 
                                             <a class="button mybtn"
-                                                href="">Read
+                                                href="{{route('blog_information', $blog->id)}}">Read
                                                 More</a>
                                         </div> <!-- .content-block ends -->
 

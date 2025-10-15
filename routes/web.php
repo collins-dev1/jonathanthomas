@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactInfoController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\TeamController;
@@ -16,11 +17,17 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $blogs = Blog::orderBy('created_at','desc')->limit(3)->get();
+    $blogs = Blog::orderBy('created_at', 'desc')->limit(3)->get();
     $partners = Partner::all();
     $testimonies = Testimony::all();
+
     return view('index', compact('blogs', 'partners', 'testimonies'));
 });
+
+Route::get('/register', function () {
+    return redirect()->route('login');
+});
+
 
 // Landing Pages
 Route::get('about_us', [LandingPageController::class, 'about_us'])->name('about_us');
@@ -32,7 +39,8 @@ Route::post('create_donation', [DonationController::class, 'create_donation'])->
 Route::post('create_info', [ContactInfoController::class, 'create_info'])->name('create_info');
 Route::get('/blog_information/{id}', [BlogController::class, 'blog_information'])->name('blog_information');
 
-Auth::routes();
+Auth::routes(['register' => false]);
+
 
 Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -75,4 +83,9 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/edit_testimony/{id}', [TestimonyController::class, 'edit_testimony'])->name('edit_testimony');
     Route::post('update_testimony/{id}', [TestimonyController::class, 'update_testimony'])->name('update_testimony');
     Route::get('delete_testimony/{id}', [TestimonyController::class, 'delete_testimony'])->name('delete_testimony');
+    Route::get('admin_profile', [HomeController::class, 'admin_profile'])->name('admin_profile');
+    Route::get('admin_setting', [HomeController::class, 'admin_setting'])->name('admin_setting');
+    Route::post('update_profile/{id}', [HomeController::class, 'update_profile'])->name('update_profile');
+    Route::get('change_password', [HomeController::class, 'change_password'])->name('change_password');
+    Route::post('update_password', [HomeController::class, 'update_password'])->name('update_password');
 });

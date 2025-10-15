@@ -479,6 +479,15 @@ body {
     .search-box input {
         width: 150px;
     }
+    .user-dropdown {
+    left: 0;
+    background-color: #fff;
+}
+
+.user-dropdown a{
+    color: #000;
+    display: flex;
+}
 }
 
 @media (max-width: 576px) {
@@ -507,7 +516,7 @@ body {
     }
 
     .user-profile span {
-        display: none;
+        display: block;
     }
 
     .stats-cards {

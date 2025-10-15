@@ -108,19 +108,6 @@
                         <li><a href="{{route('contact_information')}}">Manage Contact Information</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#" class="has-dropdown">
-                        <div class="menu-text">
-                            <i class="fas fa-quote-left"></i>
-                            <span>Testimony</span>
-                        </div>
-                        <i class="fas fa-chevron-right dropdown-arrow"></i>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="{{route('add_testimony')}}">Add Testimony</a></li>
-                        <li><a href="{{route('manage_testimony')}}">Manage Testimony</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </div>
@@ -136,21 +123,17 @@
                 <h1>Admin Dashboard</h1>
             </div>
             <div class="header-right">
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search...">
-                </div>
                 <div class="user-profile">
                     <img src="https://i.pravatar.cc/150?img=32" alt="User">
                     @auth
                         <span>{{auth()->user()->name}}</span>
                     @endauth
                     <div class="user-dropdown">
-                        <a href="#">
+                        <a href="{{route('admin_profile')}}">
                             <i class="fas fa-user"></i>
                             <span>Profile</span>
                         </a>
-                        <a href="#">
+                        <a href="{{route('admin_setting')}}">
                             <i class="fas fa-cog"></i>
                             <span>Settings</span>
                         </a>
