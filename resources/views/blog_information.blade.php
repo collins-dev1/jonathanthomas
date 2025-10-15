@@ -201,51 +201,27 @@
         <!-- End Mobile Menu -->
         <section class="page-title-banner about-page">
             <div class="container">
-                <h2>Blog</h2>
+                <h2>Blog Information</h2>
                 <ul class="breadcrum">
                     <li><a href="{{ url('/') }}">Home</a></li>
-                    <li><a href="{{ route('blog') }}">Blog</a></li>
+                    <li><a href="{{ route('blog') }}">Blog Information</a></li>
                 </ul> <!-- .breadcrumbs ends -->
             </div> <!-- .container ends -->
         </section> <!-- .page-title-banner ends -->
-        <section class="contact-options section-block">
+        <section class="contact-options section-block mb-5">
 
             <section class="latest section-block" id="latest">
                         <div class="section-title text-center">
-                            <h2>All Blogs</h2>
+                            <h2>{{$blog->title}}</h2>
+                            <div>
+                                <img src="{{ asset('storage/blogs/' . $blog->photo) }}" alt="">
+                            </div>
                             <p class="lead">
+                                {{$blog->description}}
                             </p>
                         </div> <!-- .section-title ends -->
 
-                        <div class="container">
-                            <div class="row section-content">
-                                @foreach ($blogs as $blog)
-                                <div class="col-md-4 clearfix">
-                                    <div class="shad">
-                                        <div class="im">
-                                            <img src="{{ asset('storage/blogs/' . $blog->photo) }}"
-                                                class="img-responsive" alt="project1">
-                                        </div>
-                                        <div class="content-block">
-                                            <h3>{{$blog->title}}</h3>
-                                            <div class="subtex"></div>
-                                            <p>
-                                            <p>{{$blog->description}}</p>
 
-                                            <p>&nbsp;</p>
-
-
-                                            <a class="button mybtn"
-                                                href="{{route('blog_information', $blog->id)}}">Read
-                                                More</a>
-                                        </div> <!-- .content-block ends -->
-
-                                    </div>
-                                </div>
-                                @endforeach
-
-                            </div> <!-- .row ends -->
-                        </div> <!-- .container ends -->
                     </section>
 
         </section>

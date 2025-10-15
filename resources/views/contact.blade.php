@@ -319,8 +319,10 @@
         <div class="slider-items-products">
             <div id="our-clients-slider" class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col6">
-                    <div class="item"><img src="{{ asset('landing_page/images/191035af2decb24cab.jpg') }}"
+                    @foreach ($partners as $partner)
+                    <div class="item"><img src="{{ asset('storage/partners/' . $partner->photo) }}"
                             alt="USAID"></div>
+                    @endforeach
                 </div>
             </div>
         </div>

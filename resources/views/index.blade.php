@@ -433,8 +433,9 @@
                                 </div> <!-- .col-md-6 ends -->
                                 <div class="col-lg-6">
                                     <img class="img-responsive about-img"
-                                        src="{{ asset('landing_page/images/products/171125966668585d0105b00.jpg') }}"
-                                        alt="about us photo">
+                                        src="{{ asset('landing_page/img/about_pic.jpeg') }}"
+                                        alt="about us photo" style="height: 500px !important; width:100%;">
+                                        <h3>TPL. AGBANUSI UCHECHUKWU JONATHAN Ph.D., DPHA.</h3>
                                 </div><!-- .col-md-6 ends -->
                             </div>
                         </div> <!-- .container ends -->
@@ -442,95 +443,40 @@
                     <!-- LATEST -->
                     <section class="latest section-block" id="latest">
                         <div class="section-title text-center">
-                            <h2>Recent Projects</h2>
+                            <h2>Recent Blogs</h2>
                             <p class="lead">
                             </p>
                         </div> <!-- .section-title ends -->
 
                         <div class="container">
                             <div class="row section-content">
+                                @foreach ($blogs as $blog)
                                 <div class="col-md-4 clearfix">
                                     <div class="shad">
                                         <div class="im">
-                                            <img src="{{ asset('landing_page/images/projects/4208709468bec6ae775a4.jpg') }}"
+                                            <img src="{{ asset('storage/blogs/' . $blog->photo) }}"
                                                 class="img-responsive" alt="project1">
                                         </div>
                                         <div class="content-block">
-                                            <h3>OCDI Participates in Tech4MarketWomen Training of Trainers</h3>
+                                            <h3>{{$blog->title}}</h3>
                                             <div class="subtex"></div>
                                             <p>
-                                            <p>The Management and Information System (MIS) Officer of Olive Community
-                                                Development Initiative (OCDI) recently participated in a Training of
-                                                Trainers (ToT) session organized by Tech4MarketWomen and sponsored by
-                                                MasterCard.</p>
+                                            <p>{{$blog->description}}</p>
 
                                             <p>&nbsp;</p>
 
 
                                             <a class="button mybtn"
-                                                href="https://www.olivecommunitydevelopmentinitiative.org/project.php?project_menu=95&amp;project=155">Read
+                                                href="">Read
                                                 More</a>
                                         </div> <!-- .content-block ends -->
 
                                     </div>
-                                </div> <!-- .col-md-4 ends -->
-                                <div class="col-md-4 clearfix">
-                                    <div class="shad">
-                                        <div class="im">
-                                            <img src="{{ asset('landing_page/images/projects/189409498268a6f1dd8fdda.jpg') }}"
-                                                class="img-responsive" alt="project1">
-                                        </div>
-                                        <div class="content-block">
-                                            <h3>OCDI SUMMER CAMP FOR ADOLESCENTS </h3>
-                                            <div class="subtex"></div>
-                                            <p>
-                                            <p>Olive Community Development Initiative successfully hosted its Adolescent
-                                                Summer Camp, creating a safe and engaging space for learning, growth,
-                                                and connection. This year&rsquo;s camp reached a total of 164
-                                                adolescents &mdash; including 143 girls ...</p>
-                                            <a class="button mybtn"
-                                                href="https://www.olivecommunitydevelopmentinitiative.org/project.php?project_menu=88&amp;project=154">Read
-                                                More</a>
-                                        </div> <!-- .content-block ends -->
-
-                                    </div>
-                                </div> <!-- .col-md-4 ends -->
-                                <div class="col-md-4 clearfix">
-                                    <div class="shad">
-                                        <div class="im">
-                                            <img src="{{ asset('landing_page/images/projects/1525726063688b67e24ae0d.jpg') }}"
-                                                class="img-responsive" alt="project1">
-                                        </div>
-                                        <div class="content-block">
-                                            <h3>Empowering Creativity </h3>
-                                            <div class="subtex"></div>
-                                            <p>
-                                            <p>As part of our commitment to youth empowerment and practical skill
-                                                development, Olive Community Development Initiative (OCDI), in
-                                                collaboration with @Qwiqkraft, hosted a hands-on skills-building session
-                                                focused on custom printing on t-shirts, mugs, and ...</p>
-                                            <a class="button mybtn"
-                                                href="https://www.olivecommunitydevelopmentinitiative.org/project.php?project_menu=97&amp;project=153">Read
-                                                More</a>
-                                        </div> <!-- .content-block ends -->
-
-                                    </div>
-                                </div> <!-- .col-md-4 ends -->
+                                </div>
+                                @endforeach
 
                             </div> <!-- .row ends -->
                         </div> <!-- .container ends -->
-                    </section> <!-- .latest ends -->
-                    <!-- Testimonials Box -->
-                    <section class="testimonials">
-                        <div class="section-titl text-center">
-                            <h2>Testimonials</h2>
-                        </div> <!-- .section-title ends -->
-                        <div class="slider-items-products">
-                            <div id="testimonials-slider" class="product-flexslider hidden-buttons home-testimonials">
-                                <div class="slider-items slider-width-col4 ">
-                                </div>
-                            </div>
-                        </div>
                     </section>
 
                     <!-- End Testimonials Box --><!-- our clients Slider -->
@@ -541,10 +487,12 @@
                         <div class="slider-items-products">
                             <div id="our-clients-slider" class="product-flexslider hidden-buttons">
                                 <div class="slider-items slider-width-col6">
+                                    @foreach ($partners as $partner)
                                     <div class="item"><img
-                                            src="{{ asset('landing_page/images/191035af2decb24cab.jpg') }}"
+                                            src="{{ asset('storage/partners/' . $partner->photo) }}"
                                             alt="USAID">
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

@@ -212,13 +212,15 @@
     <section class="gallery">
         <div class="container demo-gallery">
             <ul id="lightgallery" class="list-unstyled row">
-                <li class="col-xs-4 col-sm-2 col-md-2" data-src="img/85995b0bdabec60a2.jpg"
-                    data-sub-html="<h4>Health Project</h4><p>Cancer Awareness</p>" data-pinterest-text="Pin it1"
+                @foreach ($gallerys as $gallery)
+                <li class="col-xs-4 col-sm-2 col-md-2" data-src="{{ asset('storage/gallerys/' . $gallery->photo) }}"
+                    data-sub-html="" data-pinterest-text="Pin it1"
                     data-tweet-text="share on twitter 1">
                     <a href="gallery.php.html">
-                        <img class="img-responsive" src="img/85995b0bdabec60a2.jpg" alt="Thumb-1">
+                        <img class="img-responsive" src="{{ asset('storage/gallerys/' . $gallery->photo) }}" alt="Thumb-1">
                     </a>
                 </li>
+                @endforeach
             </ul>
         </div>
     </section>

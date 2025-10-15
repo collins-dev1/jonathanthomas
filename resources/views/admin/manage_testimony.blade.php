@@ -2,8 +2,11 @@
 
 @section('content')
  <div>
-        <div>
+        <div style="display: flex; flex-direction:row; justify-content:space-between; align-items:center">
             <h3><i class="fas fa-quote-left"></i> Manage Testimony</h3>
+            <a href="{{route('add_testimony')}}">
+                <button class="btn btn-success">Add More</button>
+            </a>
         </div>
         <div class="table-responsive mt-4">
             <table class="table">

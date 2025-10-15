@@ -9,11 +9,17 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Middleware\AdminMiddleware;
+use App\Models\Blog;
+use App\Models\Partner;
+use App\Models\Testimony;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    $blogs = Blog::orderBy('created_at','desc')->limit(3)->get();
+    $partners = Partner::all();
+    $testimonies = Testimony::all();
+    return view('index', compact('blogs', 'partners', 'testimonies'));
 });
 
 // Landing Pages
@@ -24,6 +30,7 @@ Route::get('blog', [LandingPageController::class, 'blog'])->name('blog');
 Route::get('donation', [LandingPageController::class, 'donation'])->name('donation');
 Route::post('create_donation', [DonationController::class, 'create_donation'])->name('create_donation');
 Route::post('create_info', [ContactInfoController::class, 'create_info'])->name('create_info');
+Route::get('/blog_information/{id}', [BlogController::class, 'blog_information'])->name('blog_information');
 
 Auth::routes();
 

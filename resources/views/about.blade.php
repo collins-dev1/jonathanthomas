@@ -375,9 +375,10 @@
                     </div> <!-- .tab-content ends -->
                 </div> <!-- .col-md-6 ends -->
                 <div class="col-lg-6">
-                    <img class="img-responsive about-img"
-                        src="{{ asset('landing_page/images/products/171125966668585d0105b00.jpg') }}"
-                        alt="about us photo">
+                   <img class="img-responsive about-img"
+                                        src="{{ asset('landing_page/img/about_pic.jpeg') }}"
+                                        alt="about us photo" style="height: 500px !important; width:100%;">
+                                        <h3>TPL. AGBANUSI UCHECHUKWU JONATHAN Ph.D., DPHA.</h3>
                 </div><!-- .col-md-6 ends -->
             </div>
         </div> <!-- .container ends -->
@@ -393,285 +394,25 @@
 
         <div class="container">
             <div class="row section-content">
+                @foreach ($teams as $team)
                 <div class="col-md-3 col-sm-6">
                     <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/13758203935b16c4648b8c0.png')}}"
+                        <img class="img-responsive" src="{{asset('storage/teams/' . $team->photo)}}"
                             alt="team member one">
                     </div>
                     <div class="content-block">
                         <div class="hover-content">
-                            <p>
-                                Oluwatoni Adeleke is the CEO and founder of OCDI. Oluwatoni is a Passionate, committed
-                                and skilled social worker with extensive experience in designing, implementing,
-                                reporting, monitoring and evaluation of community based poverty reduction programs. </p>
+                            <p> {{$team->description}}</p>
                             <!-- this b tag only for styling perpose -->
                             <b></b>
                         </div> <!-- .hover-content ends -->
                         <div class="member-info">
-                            <h4>ADELEKE OLUWATONI</h4>
-                            <h5>CEO</h5>
+                            <h4>{{$team->name}}</h4>
+                            <h5>{{$team->position}}</h5>
                         </div> <!-- .member-info ends -->
                     </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/7537272235fc1144e92e33.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                A highly skilled Finance personality with 10 years of diverse expertise experience of
-                                accounting and finance work, with a Higher National Diploma in Banking and Finance, Post
-                                Graduate Diploma in Social Sciences. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>OGUNSOLA ELIZABETH</h4>
-                            <h5>FINANCE MANAGER</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/99826660668d82439519b6.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Akanbi Blessing Olajumoke is a counsellor and a program manager with passion of
-                                providing individuals with the resources they need to reach a personal goals. With
-                                professional certification in communication skills management and human resources </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>AKANBI BLESSING</h4>
-                            <h5>PROGRAM MANAGER/COUNSELLOR</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/35288328468d82733d35b7.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Winnie Abolarin is a results-driven Communications Officer with years of experience in
-                                developing and implementing effective communication strategies to promote organizational
-                                objectives. Proven track record of creating engaging content. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Winnie Abolarin </h4>
-                            <h5>COMMUNICATIONS OFFICER</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/71740612968d825b01fb58.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Jolomi David O. is the Monitoring and Evaluation Manager of Olive Community Development
-                                Initiative. A graduate of Computer Engineering with about four years experience in
-                                system installation and diagnostics, website and data management. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>JOLOMI DAVID O.</h4>
-                            <h5>MONITORING AND EVALUATION MANAGER</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/20958682368d8286ab6f18.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Highly motivated and experienced Program Officer with a strong background in program
-                                management, coordination, and implementation. Proven track record of successfully
-                                managing programs and building strong relationships with stakeholders. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Okunloye Ifeoluwa Effiong</h4>
-                            <h5>PROGRAMS OFFICER</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/119899917668d8280066ebe.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Results-driven MIS Officer with years of experience in designing, implementing, and
-                                maintaining management information systems, driving business growth through data-driven
-                                insights and solutions. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Adelara Adedoyin</h4>
-                            <h5>MIS officer</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/100371385768d824a2cab4d.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Dr Adeleye Abosede Ifeoluwa is an adolescent health specialist. With over ten years
-                                working experience having worked on adolescent and reproductive health issues of family
-                                planning, abortion, teenage pregnancy, sexuality education among others. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Dr. Adeleye Abosede</h4>
-                            <h5>Adolescent Health Specialist </h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/212817249068d825ee3833d.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                A passionate and committed social worker with Masters and degrees in Social Work. Proven
-                                experience advocating for youth and womens empowerment, with leadership in grassroots
-                                mobilization and social campaigns. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Kehinde Zackariyah</h4>
-                            <h5>Paralegal</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/199075390568d82896ca1f0.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Benjamin is a dynamic diplomat and media personality with background in History and
-                                International Relations. Passionate about using His knowledge to support social
-                                movements and advocate for positive change. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Gbadeyan Benjamin</h4>
-                            <h5>Communications Assistant</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/122054962168d824039d9bd.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Patrick Oluwafemi Akerele is a seasoned researcher, educationist, and counselling
-                                professional with expertise in research, data analysis, and monitoring and evaluation
-                                (M&E). </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Akerele Femi Patrick</h4>
-                            <h5>Monitoring and Evaluation Expert</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/104432054368d825166eebc.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Yusuf Anifowoshe is a Finance and Administration professional with 20+ years’ experience
-                                managing donor-funded health and development programmes in Nigeria. Skilled in financial
-                                accountability, compliance, and reporting for large projects. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Yusuf Anifowoshe</h4>
-                            <h5>Finance Expert</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/13538091668d82838e45a9.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Ajiboye Goodness is a finance officer with proven expertise in financial reporting,
-                                budget management, donor reporting, and community development. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Ajiboye Goodness</h4>
-                            <h5>Finance Officer</h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="image-block">
-                        <img class="img-responsive" src="{{asset('landing_page/images/team/169355719968d826c58d1d4.png')}}"
-                            alt="team member one">
-                    </div>
-                    <div class="content-block">
-                        <div class="hover-content">
-                            <p>
-                                Adamu Keziah is a Psychologist and Mental Health Specialist skilled in counseling,
-                                psychosocial support, and care for vulnerable groups, including trauma and gender-based
-                                violence survivors. </p>
-                            <!-- this b tag only for styling perpose -->
-                            <b></b>
-                        </div> <!-- .hover-content ends -->
-                        <div class="member-info">
-                            <h4>Adamu Keizah</h4>
-                            <h5>Psychologist </h5>
-                        </div> <!-- .member-info ends -->
-                    </div> <!-- .content-block ends -->
-                </div> <!-- .col-md-3 col-sm-6 ends -->
+                </div>
+                @endforeach
             </div> <!-- .row section-content ends -->
         </div><!-- .container ends -->
     </section>
@@ -683,8 +424,10 @@
         <div class="slider-items-products">
             <div id="our-clients-slider" class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col6">
-                    <div class="item"><img src="{{ asset('landing_page/images/191035af2decb24cab.jpg') }}"
+                   @foreach ($partners as $partner)
+                     <div class="item"><img src="{{ asset('storage/partners/' . $partner->photo) }}"
                             alt="USAID"></div>
+                   @endforeach
                 </div>
             </div>
         </div>

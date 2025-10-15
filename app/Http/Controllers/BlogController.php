@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -101,5 +102,11 @@ class BlogController extends Controller
         )->persistent();
 
         return redirect()->back();
+    }
+
+    public function blog_information($id){
+        $blog = Blog::find($id);
+        $partners = Partner::all();
+        return view('blog_information', compact('blog', 'partners'));
     }
 }
